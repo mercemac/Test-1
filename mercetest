@@ -1,0 +1,12 @@
+// test
+// fuck this shit
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  cout << "fuck this shit" << endl;
+  
+  return 0;
+  }
