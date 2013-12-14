@@ -1,0 +1,54 @@
+// Game Exercise 1.0
+// Trying to create a small interactive story.
+
+#include <iostream>
+#include <string>
+using std :: cout;
+using std :: cin;
+using std :: endl;
+using std :: string;
+
+int main()
+{
+	const int OGRE_POINTS = 2;
+	int partyMembers, ogresKilled, myDifficulty;
+	string leader;
+
+	//player input
+	cout << "The start of an adventure.\n\n";
+	
+	cout << "Enter the number of your Party:";
+	cin >> partyMembers;
+
+	cout << "Enter a number between 1-100:";
+	cin >> ogresKilled;
+	
+	cout << "Choose difficulty level:";
+	cin >> myDifficulty;
+
+	enum difficulty {EASY = 1, MEDIUM = 2, HARD = 3, EPIC =4};
+	int difficulty = myDifficulty;
+
+	unsigned int loot = (ogresKilled * OGRE_POINTS * myDifficulty) / partyMembers;
+
+	//story
+	cout << "\n	Long ago, a group of " << partyMembers << " set out to see the world.";
+	cout << " Along the way they witnessed many amazing sights, and vanquished many foes.";
+	cout << " During their journey they frequented taverns and inns, trading stories and listening to news.\n";
+
+	cout << "\n	A favorite story of the group's to tell is of an epic battle";
+	cout << " the " << partyMembers << " of them fought against a horde of Ogres.";
+	cout << " They told of how the battle raged long into the night,";
+	cout << " and of how the ground was churned to mud, slick beneath their feet.";
+	cout << " Finally, as dawn was breaking, the group triumphed.\n";
+	
+	cout << "\n	They surveyed the ravenged battlefield as the remaining Ogres fled,";
+	cout << " counting " << ogresKilled << " slain Ogres.";
+  cout << " The victorious " << partyMembers << " split the gold they looted from the fallen ogres,"; 
+	cout << " each receiving " << loot << " pieces, and continued on their way.\n";
+
+	int i;
+  std::cin >> i;
+
+	return 0;
+}
